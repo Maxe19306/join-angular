@@ -29,8 +29,7 @@ ngOnInit(){
  
 }
   
-test(b){
- console.log(b.value)
+resetPassword(b){
  b.value = '';
 }
 

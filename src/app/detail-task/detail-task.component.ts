@@ -24,7 +24,6 @@ export class DetailTaskComponent {
   .valueChanges({idField: 'customIdName'})
   .subscribe((allUsers:any) => {
     this.allUsers = allUsers;
-    console.log(this.allUsers)
     this.test()
   },
   )
@@ -43,7 +42,6 @@ export class DetailTaskComponent {
 
  test(){
  this.TeamMember = this.allUsers.filter(user => user.department === this.data.category)
- console.log(this.TeamMember)
  }
 
 

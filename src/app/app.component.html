@@ -27,7 +27,7 @@
                 </button>
 
                 <span class="d-none">Kanban Project Management Tool</span>
-                <p *ngIf="!isLogin" class="{{this.currentUser.department}} initials">{{this.initials}}</p>
+                <p *ngIf="isLogin" class="{{this.currentUser.department}} initials">{{this.initials}}</p>
             </mat-toolbar-row>
 
         </mat-toolbar>

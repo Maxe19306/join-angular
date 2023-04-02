@@ -46,7 +46,6 @@ formatedDateArchiv(){
     }
   })
   this.checkAllYears()
-  console.log(this.archivFormated)
 }
 
 checkAllYears(){
@@ -61,7 +60,6 @@ this.archivFormated.forEach(task => {
 
 this.allYears = Array.from(uniqueYears);
 this.allYears.sort((a, b) => a - b);
-console.log(this.allYears);
 }
 
 

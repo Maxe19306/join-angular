@@ -41,7 +41,7 @@
 
 
     <div class="container-button">
-        <button mat-raised-button (click)="userForm.reset(); this.test(password)">cancel</button>
+        <button mat-raised-button (click)="userForm.reset(); this.resetPassword(password)">cancel</button>
         <!--(click)="userForm.reset()"-->
         <button mat-raised-button color="primary" [disabled]="userForm.invalid" (click)="this.newUser(password,userForm )">add new user</button>
 

@@ -82,10 +82,6 @@ tasksWithFormattedDate = [];
     }
   }
 
-  test(){
-    console.log(this.highTask)
-      
-  }
 
   getTasks(){
     this.firestore

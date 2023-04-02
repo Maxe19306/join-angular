@@ -1,4 +1,5 @@
 export const environment = {
+  production: true,
   firebase: {
     projectId: 'join-angular',
     appId: '1:747919273343:web:007a13e68e00e30b32be4a',

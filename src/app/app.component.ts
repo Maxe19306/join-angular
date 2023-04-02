@@ -44,7 +44,7 @@ export class AppComponent {
   }
 
   logout(){
-    this.isLogin = true;
+    this.isLogin = false;
     this.userID = '';
     this.initials = '';
     this.currenUserID = '';
@@ -61,17 +61,8 @@ export class AppComponent {
       this.currentUser = allUsers.find((user)=> user.uid === this.userID)
       this.initials = this.currentUser.firstName.charAt(0) + this.currentUser.lastName.charAt(0);
  },
-    )
-
-      
-
+    )     
     this.router.navigate(["summary"])
-
-
-  }
-
-  test(){
-    console.log(this.currentUser)
   }
 
   openSnackBar() {

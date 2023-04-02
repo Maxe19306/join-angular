@@ -36,7 +36,6 @@ async ngOnInit(){
 }
 
 async loadAllTasks(){
-  console.log('dsffds')
   this.allTasks = [];
   this.firestore
   .collection('tasks')
@@ -75,7 +74,6 @@ addTasksToProgressTasks(){
 }
 
 drop(event: CdkDragDrop<string[]>, progress) {
-  console.log(event)
   if (event.previousContainer === event.container) {
     moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
   } else {
