@@ -1,0 +1,68 @@
+<div cdkDropListGroup class="board-container">
+
+
+
+    <div class="example-container">
+        <h2>To do</h2>
+
+        <div cdkDropList [cdkDropListData]="toDoTasks" class="example-list" (cdkDropListDropped)="drop($event, 'toDo')" [cdkDropListSortingDisabled]="doneTasks.length === 0">
+            <div class="task placeholder" *ngIf="this.toDoTasks.length === 0">Currently no task in the status</div>
+            <div class="example-box task" *ngFor="let item of toDoTasks" cdkDrag (click)="openDialog(item)">
+                <p class="{{item.category}} title">{{item.category}}</p>
+                <p class="title-task"> {{item.title}}</p>
+                <p class="description">{{item.description}}</p>
+                <p>Due Date: {{item.formattedDate}}</p>
+                <p>Prio: {{item.prio}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <h2>in progress</h2>
+
+        <div cdkDropList [cdkDropListData]="inProgressTasks" class="example-list" (cdkDropListDropped)="drop($event, 'inProgress')">
+            <div class="task  placeholder" *ngIf="this.inProgressTasks.length === 0">Currently no task in the status</div>
+            <div class="example-box task" *ngFor="let item of inProgressTasks" cdkDrag (click)="openDialog(item)">
+                <p class="{{item.category}} title">{{item.category}}</p>
+                <p class="title-task">{{item.title}}</p>
+                <p class="description">{{item.description}}</p>
+                <p>Due Date: {{item.formattedDate}}</p>
+                <p> Prio: {{item.prio}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <h2>await Feedback</h2>
+
+        <div cdkDropList [cdkDropListData]="awaitFeedbackTasks" class="example-list" (cdkDropListDropped)="drop($event, 'awaitFeedback')" [cdkDropListSortingDisabled]="doneTasks.length === 0">
+            <div class="task placeholder" *ngIf="this.awaitFeedbackTasks.length === 0">Currently no task in the status</div>
+            <div class="example-box task" *ngFor="let item of awaitFeedbackTasks" cdkDrag (click)="openDialog(item)">
+                <div>
+                    <p class="{{item.category}} title">{{item.category}}</p>
+                    <p class="title-task">{{item.title}}</p>
+                    <p class="description">{{item.description}}</p>
+                    <p> Due Date: {{item.formattedDate}}</p>
+                    <p> Prio: {{item.prio}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <h2>Done</h2>
+
+        <div cdkDropList [cdkDropListData]="doneTasks" class="example-list" (cdkDropListDropped)="drop($event, 'done')" [cdkDropListSortingDisabled]="doneTasks.length === 0">
+            <div class="task placeholder" *ngIf="this.doneTasks.length === 0">Currently no task in the status</div>
+            <div class="example-box task" *ngFor="let item of doneTasks" cdkDrag (click)="openDialog(item)">
+
+                <p class="{{item.category}} title">{{item.category}}</p>
+                <p class="title-task">{{item.title}}</p>
+                <p class="description">{{item.description}}</p>
+                <p> Due Date: {{item.formattedDate}}</p>
+                <p>Prio: {{item.prio}}</p>
+
+            </div>
+        </div>
+    </div>
+</div>

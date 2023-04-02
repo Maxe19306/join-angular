@@ -1,0 +1,78 @@
+.example-container {
+    height: 100vh;
+    background-color: #324053;
+}
+
+.example-sidenav {
+    width: 15%;
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: #2A3647 !important;
+}
+
+mat-drawer {
+    background-color: #324053 !important;
+    p {
+        cursor: pointer;
+        color: white;
+    }
+    img {
+        height: 50px;
+    }
+}
+
+form {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    button {
+        width: 200px;
+        height: 50px;
+    }
+}
+
+.bottom-menü {
+    position: absolute;
+    bottom: 5px;
+    span {
+        color: white !important;
+        cursor: pointer !important;
+    }
+}
+
+.initials {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    mat-drawer {
+        position: absolute;
+        right: 0px;
+        width: 100% !important;
+    }
+    .initials {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .d-none {
+        display: none;
+    }
+}

@@ -1,0 +1,43 @@
+.impressum-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: calc(100vh - 205px);
+    color: white;
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+//fertig
+@media(max-width:1000px) {
+    .impressum-container {
+        height: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .impressum-container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .impressum-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media(max-width: 450px) {
+    .impressum-container {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,45 @@
+.board-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.example-container {
+    h2 {
+        text-align: center;
+        color: white;
+    }
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    min-width: 200px;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.description {
+    color: #A8A8A8
+}
+
+.placeholder {
+    cursor: auto;
+}
+
+.title-task {
+    font-weight: bolder;
+}

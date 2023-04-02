@@ -1,0 +1,51 @@
+<form class="example-form" #userForm="ngForm">
+    <mat-form-field class="example-full-width">
+        <mat-label>Firstname</mat-label>
+        <input matInput placeholder="Enter a firstName" name="firstName" [(ngModel)]="user.firstName" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Lastname</mat-label>
+        <input matInput placeholder="Enter a lastName" name="lastName" [(ngModel)]="user.lastName" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>mail</mat-label>
+        <input type="email" matInput placeholder="Enter a mail" name="mail" [(ngModel)]="user.mail" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>password for user </mat-label>
+        <input type="email" matInput placeholder="Password must have 6 characters" name="password" #password required>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>department</mat-label>
+        <mat-select [(ngModel)]="user.department" name="department" required>
+            <mat-option value="design">design</mat-option>
+            <mat-option value="sales">sales</mat-option>
+            <mat-option value="backoffice">backoffice</mat-option>
+            <mat-option value="marketing">marketing</mat-option>
+            <mat-option value="media">media</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <section class="example-section">
+        <label class="example-margin">Admin:</label>
+        <mat-radio-group [(ngModel)]="user.Admin" [ngModelOptions]="{standalone: true}">
+            <mat-radio-button class="example-margin" name="Admin" [value]="true">yes</mat-radio-button>
+            <mat-radio-button class="example-margin" name="Admin" [value]="false">no</mat-radio-button>
+        </mat-radio-group>
+    </section>
+
+
+    <div class="container-button">
+        <button mat-raised-button (click)="userForm.reset(); this.test(password)">cancel</button>
+        <!--(click)="userForm.reset()"-->
+        <button mat-raised-button color="primary" [disabled]="userForm.invalid" (click)="this.newUser(password,userForm )">add new user</button>
+
+    </div>
+</form>
+
+<mat-progress-bar *ngIf="this.createUserloading" mode="indeterminate"></mat-progress-bar>

@@ -1,0 +1,53 @@
+.detail-task-container {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(192, 189, 189);
+    p {
+        word-wrap: break-word;
+    }
+}
+
+.title {
+    border-radius: 8px;
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+span {
+    cursor: pointer;
+}
+
+.delete {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 40px;
+    color: #7388a5;
+}
+
+.option-see-teammember {
+    display: flex;
+    align-items: center;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+}
+
+@media(max-width: 700px) {
+    .detail-task-container {
+        width: 300px;
+    }
+}
+
+@media(max-width: 700px) {
+    .detail-task-container {
+        width: auto;
+    }
+}

@@ -1,0 +1,29 @@
+button {
+    min-width: 115px;
+    max-width: 205px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+mat-form-field {
+    width: 50%;
+}
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .container-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        button {
+            margin-bottom: 20px;
+        }
+    }
+}

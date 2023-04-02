@@ -1,0 +1,18 @@
+<div class="archiv-container">
+    <div class="button-container">
+        <button mat-raised-button (click)="this.searchAllTask()">all</button>
+        <button *ngFor="let year of allYears" mat-raised-button (click)="this.searchTasksByYear(year)">{{year}}</button>
+    </div>
+    <div class="task-container">
+        <div *ngFor="let item of archivFormated">
+            <div *ngIf="this.searchedYear === null || item.year === +this.searchedYear" class="task">
+                <p class="{{item.category}} title">{{item.category}}</p>
+                <p>Title: {{item.title}}</p>
+                <p>Desc.: {{item.description}}</p>
+                <p>Due Date: {{item.formattedDate}}</p>
+                <p>Task Owner: {{item.taskowner}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

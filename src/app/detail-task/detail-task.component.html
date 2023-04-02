@@ -1,0 +1,54 @@
+<div class="detail-task-container">
+
+    <span class="material-icons delete" *ngIf="data.progress === 'done'" (click)="moveTaskToArchive(data)">
+        task
+        </span>
+
+
+
+
+    <p class="{{data.category}} title">{{data.category}}
+
+    </p>
+
+    <div>
+
+        <h2>Title: {{data.title}}</h2>
+
+        <p> Description: {{data.description}}</p>
+        <p>Due Date: {{data.formattedDate}}</p>
+
+        <p>Prio: {{data.prio}}</p>
+        <p>task owner: {{data.taskowner}}</p>
+        <div class="option-see-teammember">
+            <p>Teammember: {{TeamMember.length}}
+
+                <span class="material-icons" (click)="viewTeamMember()" *ngIf="!seeTeamMember">
+                    expand_more
+             </span>
+
+                <span class="material-icons" (click)="lessTeamMember()" *ngIf="seeTeamMember">
+        expand_less
+        </span>
+            </p>
+        </div>
+    </div>
+
+
+    <div>
+
+
+        <div *ngIf="seeTeamMember">
+            <div *ngFor="let item of TeamMember">
+                <ng-container *ngIf="item.Admin">
+                    <p>Teammanager: {{item.firstName}} {{item.lastName}} </p>
+                </ng-container>
+            </div>
+            <div *ngFor="let item of TeamMember">
+                <ng-container *ngIf="!item.Admin">
+                    <p>{{item.firstName}} {{item.lastName}}</p>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

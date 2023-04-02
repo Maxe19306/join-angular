@@ -1,0 +1,19 @@
+<div class="contact-container">
+    <div class="left-contact-container">
+
+        <div *ngFor="let user of this.allUsers; let i = index" class="user">
+
+            <p class="{{user.department}} department">{{user.firstName.charAt(0)}} {{user.lastName.charAt(0)}}</p>
+            <div>
+                <p> {{user.firstName}} {{user.lastName}}</p>
+
+                <p class="mail"> {{user.mail}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-contact-container">
+        <h2>Contacts <span class="stroke">|</span> <span class="text">Better with a team!</span></h2>
+    </div>
+
+</div>

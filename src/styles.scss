@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    /* Breite des Scrollbalkens */
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Hintergrundfarbe des Scrollbalkens */
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #7388a5;
+    /* Farbe des Scrollbalken-Griffs */
+    border-radius: 10px;
+    /* Radius der Ecken des Griffs */
+}
+
+.design {
+    background: #FF7A00;
+}
+
+.sales {
+    background: #FC71FF;
+}
+
+.backoffice {
+    background: #1FD7C1;
+}
+
+.marketing {
+    background: #0038FF;
+}
+
+.media {
+    background-color: chartreuse;
+}
+
+.title {
+    border-radius: 8px;
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css"

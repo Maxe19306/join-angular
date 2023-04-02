@@ -1,0 +1,81 @@
+<div>
+
+    <div class="headline">
+        <h2>Summaray</h2>
+        <p>Everything in a nutshell!</p>
+    </div>
+    <div class="summary-container">
+
+        <div class="left-container" *ngIf="this.allTasks">
+
+
+
+            <div class="first-tasks">
+
+
+
+                <div class="container-tasks">
+                    <p class="number">{{this.allTasks.length}}</p>
+                    <p>tasks in board </p>
+                </div>
+
+                <div class="container-tasks">
+                    <p class="number" *ngIf="this.inProgressTasks.length > 0">{{this.inProgressTasks.length}} </p>
+
+                    <p><span *ngIf="this.inProgressTasks.length === 0">nothing</span> tasks in progress </p>
+                </div>
+
+                <div class="container-tasks">
+                    <p class="number" *ngIf="this.awaitFeedbackTasks.length > 0">{{this.awaitFeedbackTasks.length}}</p>
+                    <p> <span *ngIf="this.awaitFeedbackTasks.length === 0">nothing</span> waiting for feedback </p>
+                </div>
+            </div>
+
+            <div *ngIf="this.highTask.length > 0  " class="container-tasks high">
+                <p class="high-title"> <span class="material-icons">
+                    priority_high
+                    </span>{{this.highTask[0].title}}</p>
+
+
+                <p class="description">{{this.highTask[0].description}}</p>
+                <p>{{this.highTask[0].formattedDate}}</p>
+            </div>
+
+
+            <div class="container-little-tasks">
+                <div class="little-tasks">
+                    <span class="material-icons" title="to do Tasks">
+                        mode_edit
+                        </span>
+
+                    <div class="little-task-info">
+                        <p class="number" *ngIf="this.toDoTasks.length > 0">{{this.toDoTasks.length}} </p>
+                        <p class="number" *ngIf="this.toDoTasks.length === 0">0</p>
+                        <p> to do </p>
+                    </div>
+
+                </div>
+
+                <div class="little-tasks">
+                    <span class="material-icons" title="done tasks">
+                        done
+                        </span>
+                    <div class="little-task-info">
+                        <p class="number" *ngIf="this.doneTasks.length > 0">{{this.doneTasks.length}}</p>
+                        <p class="number" *ngIf="this.doneTasks.length === 0">0</p>
+                        <p> done</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="greet">
+            <p> Hello <span class="name"> {{this.Start.currentUser.firstName}} </span> </p>
+            <p>nice {{day}} {{greeting}}</p>
+        </div>
+
+    </div>
+</div>

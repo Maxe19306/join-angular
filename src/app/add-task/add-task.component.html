@@ -1,0 +1,50 @@
+<form class="example-form" #taskForm="ngForm">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Titel</mat-label>
+        <input matInput placeholder="Enter a Titel" name="firstName" [(ngModel)]="task.title" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>description</mat-label>
+        <input matInput placeholder="Enter a description" name="firstName" [(ngModel)]="task.description" required>
+    </mat-form-field>
+
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>category</mat-label>
+        <mat-select name="department" name="firstName" [(ngModel)]="task.category" required>
+            <mat-option value="design">design</mat-option>
+            <mat-option value="sales">sales</mat-option>
+            <mat-option value="backoffice">backoffice</mat-option>
+            <mat-option value="marketing">marketing</mat-option>
+            <mat-option value="media">media</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="this.date" name="date">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>prio</mat-label>
+        <mat-select name="department" name="prio" [(ngModel)]="task.prio" required>
+            <mat-option value="low">low</mat-option>
+            <mat-option value="middle">middle</mat-option>
+            <mat-option value="high">high</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="container-button">
+        <button mat-raised-button (click)="taskForm.reset()">cancel</button>
+        <button mat-raised-button color="primary" [disabled]="taskForm.invalid" (click)="this.createNewTask(taskForm)">add new task</button>
+    </div>
+</form>
+
+
+
+<mat-progress-bar *ngIf="createTaskloading" mode="indeterminate"></mat-progress-bar>
